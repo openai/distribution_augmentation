@@ -1,6 +1,6 @@
 # Distribution Augmentation for Generative Modeling
  
-(Unconditional samples from our 150m param CIFAR-10 model)
+Unconditional samples from our autoregressive CIFAR-10 model. (150m params, t=0.94)
 ![Samples from our model](https://github.com/openai/distribution_augmentation/blob/master/samples.png?raw=true)
 
 This is the code repository for `Distribution Augmentation for Generative Modeling`, presented at ICML 2020.  
