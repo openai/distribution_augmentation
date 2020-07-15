@@ -1,11 +1,12 @@
 # Distribution Augmentation for Generative Modeling
- 
-Unconditional samples from our autoregressive CIFAR-10 model. (150m params, t=0.94)
-![Samples from our model](https://github.com/openai/distribution_augmentation/blob/master/samples.png?raw=true)
 
 This is the code repository for `Distribution Augmentation for Generative Modeling`, presented at ICML 2020.  
 
 Paper link: https://proceedings.icml.cc/static/paper_files/icml/2020/6095-Paper.pdf
+
+Unconditional samples from our autoregressive CIFAR-10 model. (150m params, t=0.94)
+![Samples from our model](https://github.com/openai/distribution_augmentation/blob/master/samples.png?raw=true)
+
 
 # Setup
 This code is tested on Python 3.7.3, Ubuntu 16.04, Anaconda 4.7.11, Tensorflow version 1.13.1, and CUDA 10. It requires V100 GPUs. If downloading stuff from gcp, `gsutil` is also required.
