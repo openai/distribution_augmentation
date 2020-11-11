@@ -169,8 +169,11 @@ class JankySubsampledDataset(ImageDataset):
 
 class Imagenet64(ImageDataset):
     '''To download, if your data dir is /root/data:
+
     mkdir -p /root/data
-    gsutil -m cp gs://nmt-data/imagenet64-* /root/data
+    cd /root/data
+    wget https://openaipublic.blob.core.windows.net/distribution-augmentation-assets/imagenet64-train.npy
+    wget https://openaipublic.blob.core.windows.net/distribution-augmentation-assets/imagenet64-valid.npy
     '''
 
     def __init__(self, H, logprint):
@@ -205,7 +208,9 @@ class Imagenet64(ImageDataset):
 class Imagenet32(Imagenet64):
     '''To download, if your data dir is /root/data:
     mkdir -p /root/data
-    gsutil -m cp gs://nmt-data/imagenet32-* /root/data
+    cd /root/data
+    wget https://openaipublic.blob.core.windows.net/distribution-augmentation-assets/imagenet32-train.npy
+    wget https://openaipublic.blob.core.windows.net/distribution-augmentation-assets/imagenet32-valid.npy
     '''
 
     def __init__(self, H, logprint):
