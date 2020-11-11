@@ -1,3 +1,5 @@
+#!/bin/bash
+
 wget https://openaipublic.blob.core.windows.net/distribution-augmentation-assets/models/c10-15m-baseline.npz
 wget https://openaipublic.blob.core.windows.net/distribution-augmentation-assets/models/c10-15m-rot-dist-aug.npz
 wget https://openaipublic.blob.core.windows.net/distribution-augmentation-assets/models/c10-15m-rot-tr-dist-aug.npz
@@ -9,8 +11,6 @@ wget https://openaipublic.blob.core.windows.net/distribution-augmentation-assets
 wget https://openaipublic.blob.core.windows.net/distribution-augmentation-assets/models/c10-150m-rot-dist-aug.npz
 wget https://openaipublic.blob.core.windows.net/distribution-augmentation-assets/models/c10-150m-rot-tr-dist-aug.npz
 wget https://openaipublic.blob.core.windows.net/distribution-augmentation-assets/models/c10-150m-rot-tr-c-js-dist-aug.npz
-
-#!/bin/bash
 
 for dataset in cifar10; do
 for partition in test; do
