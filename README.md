@@ -9,7 +9,7 @@ Unconditional samples from our autoregressive CIFAR-10 model. (150m params, t=0.
 
 
 # Setup
-This code is tested on Python 3.7.3, Ubuntu 16.04, Anaconda 4.7.11, Tensorflow version 1.13.1, and CUDA 10. It requires V100 GPUs. If downloading stuff from gcp, `gsutil` is also required.
+This code is tested on Python 3.7.3, Ubuntu 16.04, Anaconda 4.7.11, Tensorflow version 1.13.1, and CUDA 10. It requires V100 GPUs.
 
 It requires installing `blocksparse` from source:
 
@@ -33,7 +33,7 @@ Hyperparameters for experiments live in `hyperparams.py`. They can be selected i
 
 64 gpu runs depend on the specifics of your network and system. We use the `-f` flag with a hostfile, but see options in `mpiexec` for whatever works for you.
 
-If you run imagenet64 or imagenet32, you need to download the datasets. See the corresponding class in `datasets.py` to see how to do that. We dumped copies of the datasets in gcp buckets for convenience.
+If you run imagenet64 or imagenet32, you need to download the datasets. See the corresponding class in `datasets.py` to see how to do that. We dumped copies of the datasets in Azure buckets for convenience.
 
 The specific code for experiments we reported in the paper live in the `experiments/` folder.
 
@@ -44,7 +44,8 @@ We also stored some model weights in storage buckets, which can be loaded with t
 For instance, to generate samples from a trained 15m parameter model, you can run the following:
 
 ```
-python train.py --desc samples-c10-15m-baseline --hps c10_15m --restore_path gs://openai-distribution-augmentation-assets/models/c10-15m-baseline.npz --sample_and_exit --samples_to_generate 4 --sample_batch 4
+wget https://openaipublic.blob.core.windows.net/distribution-augmentation-assets/models/c10-15m-baseline.npz
+python train.py --desc samples-c10-15m-baseline --hps c10_15m --restore_path c10-15m-baseline.npz --sample_and_exit --samples_to_generate 4 --sample_batch 4
 ```
 
 This will dump samples in the model directory.
