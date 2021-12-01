@@ -2,7 +2,7 @@
 
 This is the code repository for `Distribution Augmentation for Generative Modeling`, presented at ICML 2020.  
 
-Paper link: https://proceedings.icml.cc/static/paper_files/icml/2020/6095-Paper.pdf
+Paper link: http://proceedings.mlr.press/v119/jun20a/jun20a.pdf
 
 Unconditional samples from our autoregressive CIFAR-10 model. (150m params, t=0.94)
 ![Samples from our model](https://github.com/openai/distribution_augmentation/blob/master/samples.png?raw=true)
