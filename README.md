@@ -1,3 +1,5 @@
+NOTE: REFERENCES TO 'gs://nmt-models' have been removed as we've migrated from GCP to Azure. The code provided may not work. Pull requests are welcome.
+
 # Distribution Augmentation for Generative Modeling
 
 This is the code repository for `Distribution Augmentation for Generative Modeling`, presented at ICML 2020.  
