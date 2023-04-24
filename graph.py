@@ -11,7 +11,7 @@ import numpy as np
 
 LOGDIR = os.path.expanduser('~/bigtrans_logs')
 GRAPHDIR = os.path.expanduser('~/bigtrans_graphs')
-BUCKET = f'gs://nmt-models/{os.environ["OPENAI_USER"]}/'
+BUCKET = '<input bucket>'
 
 
 os.makedirs(LOGDIR, exist_ok=True)
